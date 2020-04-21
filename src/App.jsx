@@ -27,8 +27,8 @@ class App extends React.Component {
         let audio = new Audio(track);
         audio.currentTime = 0;
         audio.play();
+
         clearInterval(this.setIntervalId);
-        console.log(this.state.speed);
         this.setIntervalId = setInterval( this.changeIndex, this.state.speed);
 
         this.setState({
